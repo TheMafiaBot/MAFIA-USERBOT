@@ -15,7 +15,7 @@ from . import *
 
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(Config.ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 
 mafia = bot.uid
 
