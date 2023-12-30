@@ -56,6 +56,7 @@ if bool(ENV):
     else:
         basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
                     level=INFO)
+    global LOGS
     LOGS = getLogger(__name__)
 
 try:
