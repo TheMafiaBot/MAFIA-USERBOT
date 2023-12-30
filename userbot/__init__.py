@@ -45,10 +45,12 @@ import pylast
 from pySmartDL import SmartDL
 from requests import get
 # Bot Logs setup:
-LOGS = None
-if bool(ENV):
-    CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
+LOGS = None
+
+if bool(ENV):
+    global LOGS
+    CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
     if CONSOLE_LOGGER_VERBOSE:
         basicConfig(
             format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -57,7 +59,6 @@ if bool(ENV):
     else:
         basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
                     level=INFO)
-    global LOGS
     LOGS = getLogger(__name__)
 
 try:
