@@ -43,6 +43,7 @@ lottie
 nekos.py
 oauth2client
 patool
+psycopg2-binary
 PyLyrics
 pyaztro
 pySmartDL
