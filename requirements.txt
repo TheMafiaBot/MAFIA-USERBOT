@@ -19,6 +19,7 @@ colorama
 cloudscraper
 DateTime
 dnspython
+dotenv 
 emoji==1.7.0
 faker
 fontTools
