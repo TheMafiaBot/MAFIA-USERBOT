@@ -49,7 +49,6 @@ from requests import get
 LOGS = None
 
 if bool(ENV):
-    global LOGS
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
     if CONSOLE_LOGGER_VERBOSE:
         basicConfig(
