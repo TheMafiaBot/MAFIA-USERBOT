@@ -21,7 +21,7 @@ night_time = None
 last_night_message = {}
 
 DEFAULTUSER = (
-    str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+    str(Config.ALIVE_NAME) if Config.ALIVE_NAME else "Mafia User"
 )
 
 

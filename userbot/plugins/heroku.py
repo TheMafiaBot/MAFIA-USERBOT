@@ -24,7 +24,7 @@ HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
 
-MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+MAFIA_NAME = str(Config.ALIVE_NAME) if Config.ALIVE_NAME else "Mafia User"
 h1m4n5hu0p = bot.uid
 
 @borg.on(

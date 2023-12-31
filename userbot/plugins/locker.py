@@ -10,7 +10,7 @@ from . import *
 
 
 DEFAULTUSER = (
-    str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
+    str(Config.ALIVE_NAME) if Config.ALIVE_NAME else "Set Config.ALIVE_NAME in config vars in Heroku"
 )
 
 h1m4n5hu0p = bot.uid
