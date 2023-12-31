@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Var(object):
     APP_ID = int(os.environ.get("APP_ID", 6))
