@@ -6,7 +6,7 @@ from asyncio import sleep
 
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.Config.Config import BOTLOG, BOTLOG_CHATID
+from userbot.Config import Config
 from userbot.helpers.format import parse_pre
 from userbot.plugins.sql_helper import broadcast_sql as sql
 from userbot.cmdhelp import CmdHelp
@@ -58,9 +58,9 @@ async def mafiabroadcast_send(event):
         await sleep(0.5)
     resultext = f"`The message was sent to {i} chats out of {no_of_chats} chats in category {keyword}.`"
     await mafiaevent.edit(resultext)
-    if BOTLOG:
+    if Config.BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID,
+            Config.BOTLOG_CHATID,
             f"A message is sent to {i} chats out of {no_of_chats} chats in category {keyword}",
             parse_mode=parse_pre,
         )
@@ -113,9 +113,9 @@ async def mafiabroadcast_send(event):
         await sleep(0.5)
     resultext = f"`The message was sent to {i} chats out of {no_of_chats} chats in category {keyword}.`"
     await mafiaevent.edit(resultext)
-    if BOTLOG:
+    if Config.BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID,
+            Config.BOTLOG_CHATID,
             f"A message is forwared to {i} chats out of {no_of_chats} chats in category {keyword}",
             parse_mode=parse_pre,
         )
@@ -144,16 +144,16 @@ async def mafiabroadcast_add(event):
         event, f"This chat is Now added to category {keyword}", parse_mode=parse_pre
     )
     chat = await event.get_chat()
-    if BOTLOG:
+    if Config.BOTLOG:
         try:
             await event.client.send_message(
-                BOTLOG_CHATID,
+                Config.BOTLOG_CHATID,
                 f"The Chat {chat.title} is added to category {keyword}",
                 parse_mode=parse_pre,
             )
         except Exception:
             await event.client.send_message(
-                BOTLOG_CHATID,
+                Config.BOTLOG_CHATID,
                 f"The user {chat.first_name} is added to category {keyword}",
                 parse_mode=parse_pre,
             )
@@ -182,16 +182,16 @@ async def mafiabroadcast_remove(event):
         parse_mode=parse_pre,
     )
     chat = await event.get_chat()
-    if BOTLOG:
+    if Config.BOTLOG:
         try:
             await event.client.send_message(
-                BOTLOG_CHATID,
+                Config.BOTLOG_CHATID,
                 f"The Chat {chat.title} is removed from category {keyword}",
                 parse_mode=parse_pre,
             )
         except Exception:
             await event.client.send_message(
-                BOTLOG_CHATID,
+                Config.BOTLOG_CHATID,
                 f"The user {chat.first_name} is removed from category {keyword}",
                 parse_mode=parse_pre,
             )
@@ -303,16 +303,16 @@ async def mafiabroadcast_remove(event):
         parse_mode=parse_pre,
     )
     chat = await event.get_chat()
-    if BOTLOG:
+    if Config.BOTLOG:
         try:
             await event.client.send_message(
-                BOTLOG_CHATID,
+                Config.BOTLOG_CHATID,
                 f"The Chat {chat.title} is removed from category {keyword}",
                 parse_mode=parse_pre,
             )
         except Exception:
             await event.client.send_message(
-                BOTLOG_CHATID,
+                Config.BOTLOG_CHATID,
                 f"The user {chat.first_name} is removed from category {keyword}",
                 parse_mode=parse_pre,
             )
