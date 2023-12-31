@@ -44,6 +44,9 @@ import asyncio
 import pylast
 from pySmartDL import SmartDL
 from requests import get
+from dotenv import load_dotenv
+
+load_dotenv()
 # Bot Logs setup:
 
 LOGS = None
