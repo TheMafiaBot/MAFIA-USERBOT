@@ -3,6 +3,7 @@ PyGithub
 PyPDF2
 pygments
 pymediainfo
+python-dotenv
 aiofiles
 asyncurban
 aiohttp
