@@ -169,6 +169,7 @@ if ENV:
         ABUSE = os.environ.get("ABUSE", None)
         BOTLOG = os.environ.get("BOTLOG", False)
         BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", False)
+        CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
 else:
     class Config(object):
         DB_URI = None
