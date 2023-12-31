@@ -11,7 +11,7 @@ from userbot.helpers.extras import delete_mafia as eod
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+MAFIA_NAME = str(Config.ALIVE_NAME) if Config.ALIVE_NAME else "Mafia User"
 h1m4n5hu0p = bot.uid
 mafia_mention = "[{MAFIA_NAME}](tg://user?id={h1m4n5hu0p})"
 lg_id = Config.MAFIABOT_LOGGER
