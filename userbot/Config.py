@@ -167,6 +167,8 @@ if ENV:
         MAFIABOT_LOGGER = int(os.environ.get("MAFIABOT_LOGGER", None))
         BAN_PIC = os.environ.get("BAN_PIC", None)
         ABUSE = os.environ.get("ABUSE", None)
+        BOTLOG = os.environ.get("BOTLOG", False)
+        BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", False)
 else:
     class Config(object):
         DB_URI = None
