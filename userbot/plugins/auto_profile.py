@@ -13,7 +13,7 @@ from . import *
 
 DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "ʟᴇɢᴇɴᴅᴀʀʏ ᴀғ ᴍᴀғɪᴀʙᴏᴛ"
 DEL_TIME_OUT = 60
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(Config.ALIVE_NAME) if Config.ALIVE_NAME else "Mafia User"
 
 
 @bot.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
@@ -108,7 +108,7 @@ async def mine(event):
 CmdHelp("auto_profile").add_command(
   'autobio', None, 'Changes your bio with time. Need to set BIO_MSG in heroku vars(optional)'
 ).add_command(
-  'autoname', None, 'Changes your name with time according to your ALIVE_NAME in heroku var'
+  'autoname', None, 'Changes your name with time according to your Config.ALIVE_NAME in heroku var'
 ).add_command(
   'reserved', None, 'Gives the list of usernames reserved by you. In short gives the list of public groups or channels that you are owner in.'
 ).add()

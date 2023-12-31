@@ -7,7 +7,7 @@ from userbot.Config import Config
 from . import *
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(Config.ALIVE_NAME) if Config.ALIVE_NAME else "Mafia User"
 mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
 
 @mafiabot.on(admin_cmd(pattern=r"cmds"))

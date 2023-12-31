@@ -17,7 +17,7 @@ from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from . import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(Config.ALIVE_NAME) if Config.ALIVE_NAME else "Mafia User"
 
 DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "LEGENDARY AF MAFIABOT"
 BOTLOG_CHATID = Config.MAFIABOT_LOGGER
@@ -151,5 +151,5 @@ async def get_full_user(event):
 CmdHelp("clone").add_command(
   'clone', 'username/reply to user', 'Steals others profile including dp, name, bio.'
 ).add_command(
-  'revert', None, 'To get back to your profile but it will show ALIVE_NAME instead of your current name and DEFAULT_BIO instead of your current bio'
+  'revert', None, 'To get back to your profile but it will show Config.ALIVE_NAME instead of your current name and DEFAULT_BIO instead of your current bio'
 ).add()
