@@ -1,7 +1,8 @@
 import html
 
 from userbot.cmdhelp import CmdHelp
-from userbot import bot, CMD_HELP, Config.ALIVE_NAME
+from userbot import bot, CMD_HELP
+from userbot.Config import Config
 from userbot.plugins.sql_helper.gban_sql import is_gbanned
 from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
